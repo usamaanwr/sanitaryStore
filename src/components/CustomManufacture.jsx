@@ -32,7 +32,7 @@ export default function CustomManufacture() {
         {/* Left Column: Real Manufacturing Image Frame (Takes 45% width on desktop) */}
         <div className="w-full lg:w-[45%] h-[400px] bg-base-200 overflow-hidden order-2 lg:order-1 relative">
           <img 
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" 
+            src="\assets\productimages\faucet.jpg" 
             alt="Arco Premium Manufacturing Unit" 
             className="w-full h-full object-cover grayscale-[20%] contrast-[110%]"
           />
