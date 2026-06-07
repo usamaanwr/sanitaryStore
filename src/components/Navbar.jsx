@@ -32,7 +32,7 @@ export default function Navbar() {
             {/* Mobile Dropdown Menu Drawer (Matches White Premium Canvas) */}
             <ul tabIndex={0} className="dropdown-content menu menu-sm mt-4 w-52 p-4 shadow-lg bg-white border border-[#1E1B18]/5 rounded-none z-[100] flex flex-col gap-4 text-left">
               <li>
-                <Link to="/home" className={`text-xs uppercase tracking-widest font-bold p-0 ${isActive('/') ? 'text-[#B85C38]' : 'text-[#1E1B18]'}`}>
+                <Link to="/home" className={`text-xs uppercase tracking-widest font-bold p-0 ${isActive('/home') ? 'text-[#B85C38]' : 'text-[#1E1B18]'}`}>
                   Home
                 </Link>
               </li>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/product" className={`text-xs uppercase tracking-widest font-bold p-0 ${isActive('/manufacture') ? 'text-[#B85C38]' : 'text-[#1E1B18]'}`}>
+                <Link to="/product" className={`text-xs uppercase tracking-widest font-bold p-0 ${isActive('/product') ? 'text-[#B85C38]' : 'text-[#1E1B18]'}`}>
                   Our Products
                 </Link>
               </li>
@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className="navbar-center hidden md:flex justify-center flex-none">
           <ul className="flex items-center justify-center gap-10 p-0 list-none m-0">
             <li>
-              <Link to="/home" className={`text-xs uppercase tracking-widest font-bold transition-colors ${isActive('/') ? 'text-[#B85C38]' : 'text-[#1E1B18]/80 hover:text-[#B85C38]'}`}>
+              <Link to="/home" className={`text-xs uppercase tracking-widest font-bold transition-colors ${isActive('/home') ? 'text-[#B85C38]' : 'text-[#1E1B18]/80 hover:text-[#B85C38]'}`}>
                 Home
               </Link>
             </li>
@@ -80,7 +80,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/product" className={`text-xs uppercase tracking-widest font-bold transition-colors ${isActive('/manufacture') ? 'text-[#B85C38]' : 'text-[#1E1B18]/80 hover:text-[#B85C38]'}`}>
+              <Link to="/product" className={`text-xs uppercase tracking-widest font-bold transition-colors ${isActive('/product') ? 'text-[#B85C38]' : 'text-[#1E1B18]/80 hover:text-[#B85C38]'}`}>
                 Our Products
               </Link>
             </li>
