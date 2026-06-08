@@ -30,9 +30,10 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/about' element={<About />} />
-            <Route path='/Product' element={<OurProduct />} />
+            <Route path='/product' element={<OurProduct />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
           <Footer/>
