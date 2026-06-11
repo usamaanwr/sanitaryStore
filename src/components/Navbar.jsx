@@ -57,9 +57,9 @@ export default function Navbar() {
           {/* Isolated Brand Logo (Perfect Contrast Zone) */}
           <div className="flex items-center select-none py-1">
             <img 
-              src="/assets/arco-sanitary-02 (1).png" 
+              src="/assets/arco-logo.png" 
               alt="Arco Sanitary Logo" 
-              className="h-16 md:h-16 w-auto object-contain block"
+              className="h-25 md:h-25 w-auto object-contain block"
               
             />
           </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
             href="tel:+92213456789" 
             className="text-[10px] md:text-xs uppercase tracking-widest font-extrabold text-[#B85C38] border-b-2 border-[#B85C38]/20 pb-0.5 hover:border-[#B85C38] transition-colors duration-300 whitespace-nowrap"
           >
-            Call: +92 21 3456789
+            Call: +92 3153000989
           </a>
         </div>
 

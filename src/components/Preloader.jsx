@@ -72,15 +72,7 @@ export default function Preloader() {
       {/* ===== BRANDING TEXT ===== */}
       <div className="flex flex-col items-center gap-2">
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="font-editorial italic text-[18px]"
-          style={{ color: '#6B6259' }}
-        >
-          Welcome to
-        </motion.p>
+      
 
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
@@ -89,7 +81,7 @@ export default function Preloader() {
           className="text-[15px] font-bold uppercase tracking-[0.35em]"
           style={{ color: '#1E1B18' }}
         >
-          ARCO <span style={{ color: '#B85C38' }}>·</span> SANITARY
+          <img src="assets/arco-logo.png" className='' alt="" />
         </motion.h2>
 
         <motion.div
