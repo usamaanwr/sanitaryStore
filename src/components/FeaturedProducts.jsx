@@ -1,73 +1,87 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import categories from '../data/products';
-export default function FeaturedCategories() {
+// src/pages/Home.jsx (Ya aap ka main Home component)
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import categories from '../data/products'; // Sahi path check kar lein malik
+
+export default function Home() {
   const navigate = useNavigate();
 
-  
+  // 1. Saari categories ke andar se saari products nikal kar ek array banana
+  let allProducts = [];
+  categories.forEach(cat => {
+    if (cat.products) {
+      allProducts = [...allProducts, ...cat.products];
+    }
+  });
+
+  // 2. Home page ke liye sirf pehle 4 cards slice karna
+  const featuredProducts = allProducts.slice(0, 4);
+
   return (
-    /* Theme color alignment synchronized completely */
-    <section className="py-24 px-6 md:px-12 w-full bg-white text-[#1E1B18]">
+    <div className="w-full bg-white text-[#1E1B18] py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto w-full">
         
-        {/* Header Area - Left Aligned */}
-        <div className="mb-14 text-left">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-[#B85C38] font-bold block mb-2">
-            Our Signature Pieces
-          </span>
-          <h2 className="text-2xl md:text-4xl font-normal text-[#1E1B18] tracking-tight">
-            Premium Categories
-          </h2>
-        </div>
-
-        {/* 4 Cards Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {categories.map((item) => (
-            <div 
-              key={item.id}
-              /* Idhar se state pass ho rahi hai target component ke liye */
-              
-              className="group overflow-hidden flex flex-col justify-between cursor-pointer bg-[#FBF9F6] transition-all duration-300 border border-[#1E1B18]/5 hover:shadow-md"
-            >
-              {/* Image Box */}
-              <div className="relative h-72 w-full overflow-hidden bg-[#F7F5F2]">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-              </div>
-              
-              {/* Content Box */}
-              <div className="p-6 flex flex-col items-start text-left flex-1 justify-between">
-                <div>
-                  <h3 className="text-base font-bold text-[#1E1B18] mb-2 transition-colors group-hover:text-[#B85C38]">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#4A443E] text-xs leading-relaxed mb-6 font-normal">
-                    {item.description}
-                  </p>
-                </div>
-                
-                {/* <div className="text-[10px] uppercase tracking-widest text-[#1E1B18] font-bold border-b border-[#1E1B18]/30 pb-0.5 group-hover:text-[#B85C38] group-hover:border-[#B85C38] transition-colors">
-                  View Detail &rarr;
-                </div> */}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Show All Products Button (Passes 'all' option to page state) */}
-        <div className="flex justify-start">
+        {/* Section Heading */}
+        <div className="flex flex-col md:flex-row justify-between items-baseline mb-10 border-b border-[#1E1B18]/10 pb-4">
+          <div>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-extrabold">
+              Curated Collection
+            </span>
+            <h2 className="text-2xl md:text-3xl font-light tracking-tight mt-1">
+              Featured Pieces
+            </h2>
+          </div>
+          
+          {/* View All Button linked to your full product page */}
           <button 
-            onClick={() => navigate('/product', { state: { selectedCategory: 'all' } })}
-            className="bg-primary text-base-100 text-[10px] font-semibold uppercase tracking-[0.18em] px-8 py-4 rounded-none transition-all duration-300 hover:bg-accent cursor-pointer"
+            onClick={() => navigate('/products')} // Apne route ke mutabiq path check kar lein
+            className="text-xs uppercase tracking-widest font-bold text-[#B85C38] hover:opacity-80 transition-opacity mt-4 md:mt-0"
           >
-            Show All Products
+            Explore Full Range →
           </button>
         </div>
 
+        {/* Dynamic 4 Cards Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredProducts.map((product) => {
+            // Agar images array hai toh pehli uthaye, warna fallback single image path
+            const cardImage = product.images && product.images.length > 0 ? product.images[0] : product.image;
+            
+            return (
+              <div 
+                key={product.id} 
+                // 🔥 Click karte hi user dynamic detail page par bounce karega
+                onClick={() => navigate(`/product/${product.id}`)}
+                className="group flex flex-col gap-3 cursor-pointer"
+              >
+                {/* Image Wrapper Frame */}
+                <div className="h-72 bg-[#F7F5F2] overflow-hidden border border-[#1E1B18]/5 flex justify-center items-center p-8 transition-all duration-300 group-hover:border-gray-200">
+                  <img 
+                    src={cardImage} 
+                    alt={product.name} 
+                    loading="lazy"
+                    className="max-h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-105" 
+                  />
+                </div>
+                
+                {/* Product Meta Details */}
+                <div className="flex flex-col gap-1">
+                  <h4 className="text-sm font-bold text-[#1E1B18] group-hover:text-[#B85C38] transition-colors duration-300">
+                    {product.name}
+                  </h4>
+                  <p className="text-xs text-gray-400 line-clamp-1 font-light">
+                    {product.desc}
+                  </p>
+                  <span className="text-xs text-[#B85C38] font-bold mt-1">
+                    {product.price}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
       </div>
-    </section>
-  )
+    </div>
+  );
 }

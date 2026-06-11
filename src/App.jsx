@@ -9,10 +9,11 @@ import Manufucture from './pages/OurProduct'
 import Preloader from './components/Preloader'
 import Footer from './components/Footer'
 import OurProduct from './pages/OurProduct'
+import ProductDetail from './components/ProductDetail'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   const [loading, setLoading] = useState(true)
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
@@ -31,11 +32,13 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path='/home' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/product' element={<OurProduct />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
+          <WhatsAppButton />
           <Footer/>
         </BrowserRouter>
       )}
