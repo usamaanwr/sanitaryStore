@@ -1,56 +1,93 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 
 export default function ActionBanner() {
-  const navigate = useNavigate();
-
   return (
-    /* Outer section strictly keeps your base white background */
-    <section className="py-20 px-6 md:px-12 w-full bg-base-100 border-t border-neutral/10">
+    /* Outer section strictly uses your rich dark background */
+    <section className="py-24 px-6 md:px-12 w-full bg relative overflow-hidden flex items-center min-h-[550px]">
       
       {/* 
-        Inner Container: Strict width alignment 'max-w-7xl mx-auto w-full'
-        Using 'flex-col md:flex-row' to make it a 2-column layout on desktop.
+        BIG "ARCO" WATERMARK BACKGROUND TEXT 
+        * No images at all to keep it clean and minimal.
+        * Uses your exact 'text-primary' class for colors.
+        * Uses your 'font-editorial' and 'not-italic' for normal straight fonts.
       */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
+        <h1 className="font-editorial text-[16vw] font-black uppercase tracking-[0.12em] text-primary opacity-10 not-italic whitespace-nowrap">
+          ARCO
+        </h1>
+      </div>
+
+      {/* Inner Main Container - Content layout sits on top (z-10) */}
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
-        {/* Left Column: Content Area (Takes 55% width on desktop) */}
-        <div className="w-full md:w-[55%] flex flex-col items-start text-left">
+        {/* Left Column: Content Area (Takes 7 columns) */}
+        <div className="w-full lg:col-span-7 flex flex-col items-start text-left">
           
-          <span className="text-[10px] uppercase tracking-[0.4em] text-secondary font-semibold block mb-3">
-            Build Your Dream Space
-          </span>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="w-8 h-[1px] bg-primary"></span>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-primary font-semibold font-sans">
+              Build Your Dream Space
+            </span>
+          </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-neutral tracking-tight leading-tight mb-4">
-            Consult With Our Architectural Sanitary Experts Today
+          {/* Headline using your variables, strictly normal (not-italic) */}
+          <h2 className=" text-4xl sm:text-5xl md:text-6xl font-normal text-dark-100 tracking-tight leading-[1.15] mb-6 not-italic">
+            Consult With Our <br />
+            <span className="text-[#B85C38]">Sanitary Experts</span> <br />
+            Today
           </h2>
           
-          <p className="text-neutral/80 text-xs md:text-sm font-light max-w-md leading-relaxed mb-8">
+          <p className="text-[#B85C38] text-xs md:text-sm font-bold max-w-xl leading-relaxed">
             Get customized quotes, browse technical specifications, and select premium fixtures perfectly matching your property layout.
           </p>
-
-          {/* Button using primary terracotta color with accent deep brown hover */}
-          <button 
-            onClick={() => navigate('/contact')}
-            className="bg-primary text-base-100 text-xs uppercase tracking-widest font-semibold px-8 py-3.5 rounded-none cursor-pointer hover:bg-accent transition-colors duration-300"
-          >
-            Request Architectural Catalogue
-          </button>
           
         </div>
 
-        {/* 
-          Right Column: Premium Image Frame (Takes 45% width on desktop)
-          Using your warm off-white (bg-base-200) as an image frame placeholder.
-        */}
-        <div className="w-full md:w-[45%] h-[350px] md:h-[400px] bg-base-200 overflow-hidden relative">
-          <img 
-            src="\assets\heroSection\images3.jpg" 
-            alt="Luxury Architectural Sanitary Space" 
-            className="w-full h-full object-cover grayscale-[15%] contrast-[105%]"
-          />
-          {/* Subtle light overlay to match the minimal look */}
-          <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+        {/* Right Column: Premium Side Boxes Stack (Takes 5 columns) */}
+        <div className="w-full lg:col-span-5 flex flex-col gap-5">
+          
+          {/* Box 1: Experience */}
+          <div className="w-full border border-base-200/10 p-6 bg-base-200/[0.02] backdrop-blur-md hover:border-primary/30 transition-colors duration-300">
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[#B85C38] font-semibold block mb-2">
+              Experience
+            </span>
+            <div className="flex items-baseline gap-2">
+              <span className="font-editorial text-2xl md:text-3xl font-semibold text-[#B85C38]">17+</span>
+              <span className="font-editorial text-2xl md:text-3xl font-normal text-[#B85C38] ">Years</span>
+            </div>
+            <p className="text-[11px] text-primary mt-1">
+              Trusted in Karachi
+            </p>
+          </div>
+
+          {/* Box 2: Products Range */}
+          <div className="w-full border border-base-200/10 p-6 bg-base-200/[0.02] backdrop-blur-md hover:border-primary/30 transition-colors duration-300">
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[#B85C38] font-semibold block mb-2">
+              Products Range
+            </span>
+            <div className="flex items-baseline gap-2">
+              <span className="font-editorial text-2xl md:text-3xl font-semibold text-[#B85C38]">500+</span>
+              <span className="font-editorial text-2xl md:text-3xl font-normal text-[#B85C38]">Items</span>
+            </div>
+            <p className="text-[11px] text-primary  mt-1">
+              Faucets • Showers • Ceramics
+            </p>
+          </div>
+
+          {/* Box 3: Brands */}
+          <div className="w-full border border-base-200/10 p-6 bg-base-200/[0.02] backdrop-blur-md hover:border-primary/30 transition-colors duration-300">
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[#B85C38] font-semibold block mb-2">
+              Brands
+            </span>
+            <div className="flex items-baseline gap-2">
+              <span className="font-editorial text-2xl md:text-3xl font-semibold text-[#B85C38]">20+</span>
+              <span className="font-editorial text-2xl md:text-3xl font-normal text-[#B85C38]">Brands</span>
+            </div>
+            <p className="text-[11px] text-primary  mt-1">
+              Local & International
+            </p>
+          </div>
+
         </div>
 
       </div>

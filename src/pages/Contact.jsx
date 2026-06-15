@@ -27,12 +27,10 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Yahan aap apna backend processing ya console log rakh sakte hain
-    console.log("Form Submitted:", formData);
   };
 
   return (
-    <div className="w-full bg-base-100 min-h-screen py-16 px-6 md:px-12 font-sans">
+    <div className="w-full bg-white min-h-screen py-16 px-6 md:px-12 font-sans">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Page Header - Left Aligned */}
@@ -40,9 +38,7 @@ export default function Contact() {
           <span className="text-[10px] uppercase tracking-[0.4em] text-secondary font-semibold block mb-2">
             Get In Touch
           </span>
-          <h1 className="text-3xl md:text-5xl font-normal text-neutral tracking-tight">
-            Connect With Arco
-          </h1>
+         
         </div>
 
         {/* 2-Column Main Layout */}
