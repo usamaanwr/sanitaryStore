@@ -1,78 +1,123 @@
-// // src/data/categories.js
-// const categories = [
-//   {
-//     id: 1,
-//     title: "Designer Faucets",
-//     slug: "faucets",
-//     description: "Anti-rust brass core luxury taps with custom premium finishes.",
-//     image: "/assets/productimages/faucet.jpg",
-//     products: [
-//       { id: "f1", name: "Classic Chrome Faucet", price: "Rs. 4,500", image: "/assets/productimages/faucet.jpg", desc: "Premium brass core with high-gloss chrome plating." },
-//       { id: "f2", name: "Matt Black Mixer", price: "Rs. 7,500", image: "/assets/productimages/faucet.jpg", desc: "Contemporary matt black finish with smooth dual control." },
-//       { id: "f3", name: "Rose Gold Basin Tap", price: "Rs. 12,000", image: "/assets/productimages/faucet.jpg", desc: "Luxury electroplated rose gold tap for premium vanities." }
-//     ]
-//   },
-//   {
-//     id: 2,
-//     title: "Thermostatic Showers",
-//     slug: "showers",
-//     description: "Smart temperature control systems for high-end bathrooms.",
-//     image: "/assets/productimages/basin.jpg",
-//     products: [
-//       { id: "s1", name: "Rainfall Smart Shower", price: "Rs. 24,000", image: "/assets/productimages/basin.jpg", desc: "360-degree overhead rainfall experience with smart stop." },
-//       { id: "s2", name: "Digital Temperature Mixer", price: "Rs. 32,000", image: "/assets/productimages/basin.jpg", desc: "LED display thermostatic controller with anti-scald protection." }
-//     ]
-//   },
-//   {
-//     id: 3,
-//     title: "Bespoke Washbasins",
-//     slug: "basins",
-//     description: "Monolithic ceramic basins crafted for contemporary architectural spaces.",
-//     image: "/assets/productimages/shower.jpg",
-//     products: [
-//       { id: "b1", name: "Monolithic Pedestal Basin", price: "Rs. 18,500", image: "/assets/productimages/shower.jpg", desc: "Single piece matte ceramic Italian design basin." },
-//       { id: "b2", name: "Countertop Quartz Bowl", price: "Rs. 14,000", image: "/assets/productimages/shower.jpg", desc: "Scratch-resistant quartz stone bowl with fine rim details." }
-//     ]
-//   },
-//   {
-//     id: 4,
-//     title: "Smart Sanitary Ware",
-//     slug: "sanitary",
-//     description: "Intelligent wall-hung toilets with automated hygienic features.",
-//     image: "/assets/productimages/toilet.jpg",
-//     products: [
-//       { id: "w1", name: "Intelligent Wall-Hung Commode", price: "Rs. 65,000", image: "/assets/productimages/toilet.jpg", desc: "Automated lid flushing, heated seat, and nightlight comfort." },
-//       { id: "w2", name: "Rimless Eco Toilet", price: "Rs. 28,000", image: "/assets/productimages/toilet.jpg", desc: "Super efficient rimless vortex flush technology for modern hygiene." },
-//       { id: "w3", name: "Matt Grey Concealed Suite", price: "Rs. 42,000", image: "/assets/productimages/toilet.jpg", desc: "Premium wall-hung closet with concealed cistern frame." }
-//     ]
-//   }
-// ];
 
-// export default categories;
-// src/data/categories.js
-const categories = [
+ export const categories = [
   {
     id: 1,
-    title: "Designer Faucets",
-    slug: "faucets",
-    description: "Anti-rust brass core luxury taps with custom premium finishes.",
-    image: "/assets/productimages/faucet.jpg",
-    products: [
-      { 
-        id: "f1", 
-        name: "Classic Chrome Faucet", 
-        price: "Rs. 4,500", 
-        // 👇 Badi image ke liye pehla index use hoga, baaki 3 niche thumbnails ke liye
-        images: [
-          "/assets/productimages/faucet.jpg", // Yeh main image banegi
-          "/assets/productimages/faucet.jpg", // Thumbnail 1
-          "/assets/productimages/faucet.jpg", // Thumbnail 2
-          "/assets/productimages/faucet.jpg"  // Thumbnail 3
-        ], 
-        desc: "Premium brass core with high-gloss chrome plating." 
-      },
-      // ... Baki products mein bhi isi tarah 'images' ka array bana do malik
-    ]
-  }
-];
-export default categories;
+    name: "Shower Panel",
+    category: "Showers",
+    description: "Premium multi-function shower panel with rainfall head, body jets, and thermostatic mixer — built for a luxurious bathing experience.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524653/05_cdodv1.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524648/04_hbfewc.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524643/03_vitixt.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524638/02_ibfz77.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524633/01_whqpgh.jpg",
+    ],
+  },
+  {
+    id: 2,
+    name: "Bath Mixer",
+    category: "Faucets",
+    description: "Solid brass bath mixer with smooth ceramic cartridge, chrome finish, and precise temperature control.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524152/03_wh2oro.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524157/05_mbsipl.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524155/04_s2mzzv.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524151/02_qre5wk.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524150/01_mgvj9v.jpg",
+    ],
+  },
+  {
+    id: 3,
+    name: "Cabinet Wash Basin",
+    category: "Ceramics",
+    description: "Elegant ceramic wash basin paired with a modern storage cabinet — perfect blend of style and functionality.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524577/05_q4nkf6.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524572/04_fxir5t.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524567/03_ulzkju.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524562/02_vrsytw.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524559/01_clngvs.jpg",
+    ],
+  },
+  {
+    id: 4,
+    name: "Concealed Fitting",
+    category: "Faucets",
+    description: "Wall-concealed diverter and mixing valve set — clean, minimal look with reliable in-wall mechanism.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524602/05_tvb8qs.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524597/04_av5agx.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524592/03_vjtij0.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524587/02_fjhbbw.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524582/01_kuiq91.jpg",
+    ],
+  },
+  {
+    id: 5,
+    name: "Vanity Bowl",
+    category: "Ceramics",
+    price: "Rs. 16,000",
+    description: "Designer countertop vanity bowl with a smooth glossy finish — adds a statement piece to any bathroom.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524705/05_wi4zat.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524700/04_krgmnk.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524695/02_l38mj1.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524690/03_blp9ck.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524685/01_lygf4o.jpg",
+    ],
+  },
+  {
+    id: 6,
+    name: "Sink Mixer",
+    category: "Faucets",
+    description: "Single-lever sink mixer with water-saving aerator and durable chrome-plated body.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524678/05_vmy5xb.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524673/04_pdc0vu.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524668/03_ci1rih.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524663/02_slgkxu.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524658/01_lx81ud.jpg",
+    ],
+  },
+  {
+    id: 7,
+    name: "Wall Hung Commode",
+    category: "Ceramics",
+    description: "Space-saving wall-hung commode with dual-flush technology and soft-close seat for a modern look.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524731/05_hko320.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524726/04_jp5suh.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524721/03_vy3mtg.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524717/02_ecn9c3.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524711/01_r5h9wu.jpg",
+    ],
+  },
+  {
+    id: 8,
+    name: "Concealed Tank",
+    category: "Ceramics",
+    description: "In-wall concealed cistern tank — durable, quiet flush mechanism, ideal for wall-hung commodes.",
+    // mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524628/05_ih6tpr.jpg",
+    // images: [
+    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524623/04_ao7pzj.jpg",
+    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524618/03_zlvoe6.jpg",
+    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524613/02_zapes9.jpg",
+    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524608/01_l6pdkm.jpg",
+    // ],
+  },
+  {
+    id: 9,
+    name: "LED Looking Mirror",
+    category: "Accessories",
+    price: "Rs. 19,500",
+    description: "Anti-fog LED mirror with touch sensor control and adjustable lighting — a modern essential for every bathroom.",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524628/05_ih6tpr.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524623/04_ao7pzj.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524618/03_zlvoe6.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524613/02_zapes9.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524608/01_l6pdkm.jpg",
+    ],
+  },
+]
+

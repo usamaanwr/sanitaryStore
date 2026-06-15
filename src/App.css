@@ -13,7 +13,7 @@
   --color-secondary:   #C4622D;   /* Warm Rust — numbers, highlights */
   --color-accent:      #8B3A1F;   /* Deep Brown — hover states */
   --color-neutral:     #4A4A4A;   /* Dark Gray — body text */
-  --color-base-100:    #FFFFFF;   /* White — main background */
+  --color-base-100:    #ffffff; /* — main background */
   --color-base-200:    #F5F4F0;   /* Warm Off-white — card background */
   --color-base-300:    #EFEFEA;   /* Light warm gray — section bg */
   --color-dark:        #1A1A1A;   /* Near black — hero/footer bg */
@@ -31,7 +31,7 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-base-100);
+  background-color: var();
   color: var(--color-neutral);
 }
 

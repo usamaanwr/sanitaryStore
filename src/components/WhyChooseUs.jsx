@@ -1,56 +1,82 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+const points = [
+  {
+    id: '01',
+    icon: '✦',
+    title: 'Architectural Grade Brass',
+    desc: 'Every item forged using high-purity solid brass to eliminate impurities and guarantee zero rust over decades of use.',
+  },
+  {
+    id: '02',
+    icon: '◈',
+    title: 'Advanced Ceramic Cartridges',
+    desc: 'Tested for 500,000+ switching cycles — smooth water flow and completely leak-proof performance, guaranteed.',
+  },
+  {
+    id: '03',
+    icon: '◉',
+    title: 'Eco-Friendly Technology',
+    desc: 'Smart aerators reduce water wastage up to 40% without compromising on pressure or the luxury feel.',
+  },
+]
 
 export default function WhyChooseUs() {
-  const points = [
-    {
-      id: 1,
-      title: "Architectural Grade Brass",
-      description: "Every item is forged using high-purity solid brass core to eliminate impurities and guarantee zero rust over decades."
-    },
-    {
-      id: 2,
-      title: "Advanced Ceramic Cartridges",
-      description: "Tested for over 500,000 switching cycles to ensure smooth water flow and completely leak-proof performance."
-    },
-    {
-      id: 3,
-      title: "Eco-Friendly Technology",
-      description: "Integrated smart aerators reduce water wastage up to 40% without compromising on pressure or structural luxury."
-    }
-  ];
-
   return (
-    <section className="py-20 px-6 md:px-12 w-full bg-base-100 border-t border-neutral/10">
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-12 items-start justify-between">
-        
-        {/* Left Side Static Text */}
-        <div className="w-full md:w-1/3 text-left">
-          <span className="text-[10px] uppercase tracking-[0.4em] text-secondary font-semibold block mb-2">
-            Engineering Excellence
+    <section className="py-24 px-6 md:px-12 w-full bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+
+        {/* ===== BADGE + HEADING ===== */}
+        <div className="flex items-center gap-3 mb-4">
+          <span className="w-7 h-px bg-primary" />
+          <span className="text-[9px] uppercase tracking-[0.38em] font-semibold text-primary">
+            Why Arco
           </span>
-          <h2 className="text-2xl md:text-4xl font-normal text-neutral tracking-tight leading-tight">
-            Crafted for Lifetime Durability
-          </h2>
         </div>
 
-        {/* Right Side Points List */}
-        <div className="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
-          {points.map((point) => (
-            <div key={point.id} className="flex flex-col items-start">
-              {/* Using your secondary Warm Rust for indicators */}
-              <span className="text-xs font-bold text-secondary tracking-widest mb-4">
-                0{point.id} /
-              </span>
-              <h3 className="text-lg font-normal text-neutral mb-2">
-                {point.title}
+        <h2 className=" text-3xl md:text-4xl font-bold text-dark mb-12 leading-tight max-w-md">
+          Built Different.{' '}
+          <span className="text-primary ">Lasts Forever</span>
+        </h2>
+
+        {/* ===== CARDS GRID ===== */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {points.map((p) => (
+            <div
+              key={p.id}
+              className="bg-white p-8 border-b-2 border-2 transition-all duration-250 hover:-translate-y-1"
+              onMouseEnter={e => e.currentTarget.style.borderBottomColor = '#B85C38'}
+              onMouseLeave={e => e.currentTarget.style.borderBottomColor = 'transparent'}
+            >
+              {/* Card Top — number + icon */}
+              <div className="flex items-center justify-between mb-6">
+                <span className=" text-5xl font-bold text-[#B85C38]">
+                  {p.id}
+                </span>
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-primary text-lg"
+                
+                >
+                  {p.icon}
+                </div>
+              </div>
+
+              {/* Title */}
+              <h3 className="font-editorial text-[17px] font-bold text-dark mb-3 leading-snug">
+                {p.title}
               </h3>
-              <p className="text-neutral/80 text-xs md:text-sm font-light leading-relaxed">
-                {point.description}
+
+              {/* Desc */}
+              <p className="text-xs leading-[1.9] font-semibold text-[#B85C38]">
+                {p.desc}
               </p>
             </div>
           ))}
         </div>
 
+        {/* ===== BOTTOM STRIP ===== */}
+        
       </div>
     </section>
   )

@@ -1,117 +1,127 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import categories from '../data/products';
+import { categories } from '../data/products';
 
 export default function ProductDetail() {
-  const { productId } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
-  
-  // State to track the currently active big image
-  const [mainImage, setMainImage] = useState('');
 
-  // 1. Pure data mein se product filter karna
-  let currentProduct = null;
-  categories.forEach(cat => {
-    const found = cat.products.find(p => String(p.id) === String(productId));
-    if (found) currentProduct = found;
-  });
+  // Robust parsing to match string/number IDs smoothly
+  const product = categories.find((item) => String(item.id) === String(id));
 
-  // 2. Jab product change ho, toh main image ko automatically pehli image par set karna
+  const [activeImage, setActiveImage] = useState('');
+
   useEffect(() => {
-    if (currentProduct) {
-      if (currentProduct.images && currentProduct.images.length > 0) {
-        setMainImage(currentProduct.images[0]);
-      } else {
-        setMainImage(currentProduct.image);
-      }
+    if (product) {
+      setActiveImage(product.mainImage);
     }
-  }, [currentProduct]);
+  }, [product]);
 
-  if (!currentProduct) {
+  if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="text-center">
-          <h2 className="text-xl font-bold mb-4">Product Not Found</h2>
-          <button onClick={() => navigate('/')} className="text-[#B85C38] underline font-bold">Back to Home</button>
-        </div>
+      <div className="py-40 text-center bg-white text-dark">
+        <h2 className="text-lg font-light uppercase tracking-widest text-error mb-2">Product Not Found</h2>
+        <p className="text-xs opacity-60 mb-6">The requested item code could not be verified.</p>
+        <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-neutral text-base-100 text-xs uppercase tracking-wider font-medium hover:bg-primary transition-colors">
+          Return Home
+        </button>
       </div>
     );
   }
 
-  // Fallback array agar kisi product mein images na hon
-  const productImagesList = currentProduct.images || [currentProduct.image];
+  // Gather all images (Main + thumbnails)
+  const allImages = product.images && product.images.length > 0 
+    ? [product.mainImage, ...product.images] 
+    : [product.mainImage];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-24 text-[#1E1B18]">
-      {/* Back Button */}
-      <button 
-        onClick={() => navigate(-1)} 
-        className="mb-8 flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-[#B85C38] hover:opacity-80 transition-opacity"
-      >
-        ← Go Back
-      </button>
-
-      {/* Luxury Layout Split */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+    // pt-32 lagaya hai taake page top se thoda neeche shift ho jaye aur space mile
+    <section className="pt-32 pb-20 bg-white px-6 md:px-12 min-h-screen">
+      <div className="max-w-6xl mx-auto">
         
-        {/* 📸 LEFT SIDE: E-COMMERCE PREMIUM GALLERY */}
-        <div className="flex flex-col gap-4">
-          {/* Main Big Image Frame */}
-          <div className="bg-[#F9F9F9] border border-gray-100 p-12 flex justify-center items-center h-[400px] w-full">
-            <img 
-              src={mainImage} 
-              alt={currentProduct.name} 
-              className="max-h-full object-contain transition-all duration-300"
-            />
-          </div>
-
-          {/* 3 Thumnails Grid Niche */}
-          <div className="grid grid-cols-4 gap-4">
-            {productImagesList.map((imgUrl, index) => (
-              <div 
-                key={index}
-                onClick={() => setMainImage(imgUrl)} // Click karte hi badi image change!
-                className={`bg-[#F9F9F9] border p-2 flex justify-center items-center h-20 cursor-pointer transition-all ${
-                  mainImage === imgUrl ? 'border-[#B85C38] ring-1 ring-[#B85C38]' : 'border-gray-100 hover:border-gray-400'
-                }`}
-              >
-                <img src={imgUrl} alt="thumbnail" className="max-h-full object-contain" />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 📝 RIGHT SIDE: TYPOGRAPHIC INFO PANEL */}
-        <div className="flex flex-col justify-center md:sticky md:top-32">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-extrabold mb-2">
-            Arco Premium Collection
-          </span>
-          <h1 className="text-3xl md:text-4xl font-light tracking-tight mb-3">
-            {currentProduct.name}
-          </h1>
-          <p className="text-2xl font-semibold text-[#B85C38] mb-8">
-            {currentProduct.price}
-          </p>
-          
-          <div className="border-t border-b border-gray-100 py-6 mb-8">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-3 text-gray-400">Specifications</h3>
-            <p className="text-gray-600 text-sm leading-relaxed font-light">
-              {currentProduct.desc}
-            </p>
-          </div>
-
-          {/* WhatsApp Action Channel */}
-          <a 
-            href={`https://wa.me/923001234567?text=Salam%20Arco%20Bath,%20I%20am%20interested%20in%20learning%20more%20about%20the%20${encodeURIComponent(currentProduct.name)}.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full text-center bg-[#1E1B18] text-white py-4 font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#B85C38] transition-colors duration-300"
+        {/* Navigation Layer: Back to Home Button */}
+        <div className="mb-8 flex items-center justify-between border-b border-neutral/10 pb-4">
+          <button 
+            onClick={() => navigate('/')} 
+            className="text-[11px] uppercase tracking-[0.25em] font-medium flex items-center gap-2 text-neutral hover:text-primary transition-colors"
           >
-            Inquire via WhatsApp
-          </a>
+            ← Back to Home
+          </button>
+          
+          <div className="text-[10px] uppercase tracking-[0.2em] font-normaltext-neutral hidden sm:block">
+            Collection / {product.category}
+          </div>
         </div>
 
+        {/* 2-Column Split Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          {/* LEFT COLUMN: Image Layout (image_901949.png Style) */}
+          <div className="lg:col-span-7 flex flex-col gap-4">
+            
+            {/* Big Main Image Frame (object-contain lagaya hai taake image poori dikhe) */}
+            <div className="w-full aspect-[4/3] sm:aspect-[16/10] bg-neutral/5 border border-neutral/5 flex items-center justify-center overflow-hidden">
+              <img 
+                src={activeImage} 
+                alt={product.name} 
+                className="w-full h-full object-contain transition-all duration-300" 
+              />
+            </div>
+
+            {/* Thumbnails Row: Horizontally aligned underneath */}
+            <div className="flex flex-row gap-3 overflow-x-auto pb-2 scrollbar-none">
+              {allImages.map((imgUrl, index) => (
+                <div 
+                  key={index}
+                  onClick={() => setActiveImage(imgUrl)}
+                  className={`w-20 sm:w-24 aspect-[4/3] bg-neutral/5 overflow-hidden flex-shrink-0 cursor-pointer border flex items-center justify-center transition-all duration-200 ${
+                    activeImage === imgUrl ? 'border-primary opacity-100 scale-[0.96]' : 'border-neutral/10 opacity-50 hover:opacity-100'
+                  }`}
+                >
+                  <img 
+                    src={imgUrl} 
+                    alt={`View-${index}`} 
+                    className="w-full h-full object-contain" 
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: Description Details */}
+          <div className="lg:col-span-5 text-left pt-2 lg:sticky lg:top-24">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-primary font-bold block mb-2">
+              {product.category}
+            </span>
+            <h1 className="text-3xl font-bold text-dark tracking-tight uppercase mb-4">
+              {product.name}
+            </h1>
+            <div className="w-12 h-[1px] bg-primary  mb-6"></div>
+            
+            <p className="text-sm text-neutral font-normal leading-relaxed mb-8">
+              {product.description}
+            </p>
+
+            {/* Specifications */}
+            <div className="border-t border-neutral/10 pt-6 text-[11px] font-light tracking-wide text-neutral/70 uppercase space-y-3">
+              <div className="flex justify-between py-1.5 border-b border-neutral/5">
+                <span className='text-dark font-bold'>Premium Quality</span>
+                <span className="text-[#B85C38] font-normal">Architectural Finish</span>
+              </div>
+              <div className="flex justify-between py-1.5 border-b border-neutral/5">
+                <span className='text-dark font-bold'>Status</span>
+                <span className="text-[#B85C38] font-normal">Available in Multiple Variations</span>
+              </div>
+            </div>
+
+            {/* Action Button */}
+            <button className="w-full mt-10 bg-neutral text-base-100 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-primary transition-colors duration-300">
+              Inquire Specifications
+            </button>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
