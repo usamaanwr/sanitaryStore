@@ -32,8 +32,8 @@ export default function OurProducts() {
 
             return (
               <div 
-                key={product.id}
-                onClick={() => navigate(`/product/${product.id}`)}
+                key={product.slug}
+                onClick={() => navigate(`/product/${product.slug}`)}
                 className="group cursor-pointer flex flex-col text-left"
               >
                 {/* Fixed Ratio Image Box with Zoom-In Hover */}
