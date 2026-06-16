@@ -81,7 +81,7 @@ export default function Preloader() {
           className="text-[15px] font-bold uppercase tracking-[0.35em]"
           style={{ color: '#1E1B18' }}
         >
-          <img src="assets/arco-logo.png" className='' alt="" />
+          <img src="https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781637988/arco-logo_kun34g.png" className='' alt="arco-logo" />
         </motion.h2>
 
         <motion.div

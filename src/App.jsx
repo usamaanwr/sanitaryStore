@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import OurProduct from './pages/OurProduct'
 import ProductDetail from './components/ProductDetail'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -29,6 +30,7 @@ function App() {
         <Preloader />
       ) : (
         <BrowserRouter>
+        <ScrollToTop/>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />

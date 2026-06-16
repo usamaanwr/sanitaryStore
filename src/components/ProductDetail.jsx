@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { categories } from '../data/products';
-
 export default function ProductDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -115,8 +114,10 @@ export default function ProductDetail() {
             </div>
 
             {/* Action Button */}
-            <button className="w-full mt-10 bg-primary text-base-100 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-dark cursor-pointer transition-colors duration-300">
+            <button className="w-full mt-10 bg-primary text-white py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-dark cursor-pointer transition-colors duration-300">
+              <Link to={"/contact"}>
               Inquire Specifications
+              </Link>
              
             </button>
           </div>

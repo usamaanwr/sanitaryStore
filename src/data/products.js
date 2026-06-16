@@ -105,10 +105,10 @@
     name: "Concealed Tank",
     category: "Ceramics",
     description: "In-wall concealed cistern tank — durable, quiet flush mechanism, ideal for wall-hung commodes.",
-    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/You_won_t_see_it_but_you_ll_feel_the_difference_ascylu.jpg",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623451/5005-1_a2owvx.jpg",
     images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623469/images4_buchiw.jpg",
       "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/We_would_like_to_let_you_know_that_this_smart_y2spk2.jpg",
-      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/332773859988133612_bv8vm6.jpg",
       "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/This_is_a_Brand_new_RAK_Ecofix_Top_and_Front_vjeacj.jpg",
       "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594109/586945763965901763_zpiazu.jpg",
     ],
@@ -118,7 +118,6 @@
     slug:"mirro",
     name: "LED Looking Mirror",
     category: "Accessories",
-    price: "Rs. 19,500",
     description: "Anti-fog LED mirror with touch sensor control and adjustable lighting — a modern essential for every bathroom.",
     mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524628/05_ih6tpr.jpg",
     images: [
@@ -128,5 +127,47 @@
       "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524608/01_l6pdkm.jpg",
     ],
   },
+  {
+    id: 10,
+    slug:"muslim shower",
+    name: "Premium Muslim Shower Set",
+    category: "Showers",
+    description: "Ergonomically designed solid brass Muslim shower with a high-pressure trigger, flexible anti-twist hose, and a durable rust-resistant chrome finish",
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623406/TRUSTMI_Brass_Muslim_Shataff_Toilet_Hand_Held_hnwo4r.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623406/Matt_Black_Shataff_Muslim_Bidet_Douche_Toilet_duyeds.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623405/IMPROVE_YOUR_PERSONAL_HYGIENE__If_you_are_looking_smlwdd.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623405/72902087706823692_rdqice.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781623405/480900066468481350_eplbj1.jpg",
+    ],
+  },
+  {
+  id: 11,
+  slug: "premium-rain-shower", // 
+  name: "Luxury Rainfall Shower Head",
+  category: "Showers", 
+  description: "Ultra-slim stainless steel overhead rain shower designed for a soothing, full-coverage water flow, featuring anti-clog silicone nozzles and a sleek minimalist profile.",
+  mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781624971/Upgrade_your_bathroom_with_the_Wonderland_America_efhbxo.jpg",
+  images: [
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781624969/Luxurious_Rainfall_Showerheads_qcnwof.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781624969/Upgrade_to_YAWWALK_s_all-metal_rainfall_shower_dcx8ac.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781624968/22729173112918867_k12arr.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781624968/13510867620939930_jft9z2.jpg",
+  ],
+},
+{
+  id: 12,
+  slug: "architectural-floor-drain", // Secure URL slug
+  name: "Linear Architectural Floor Drain",
+  category: "Accessories",
+  description: "High-flow stainless steel linear shower drain featuring a minimalist tile-insert profile, built-in anti-odor trap, and a heavy-duty strain resistance engineered for modern walk-in showers.",
+  mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781625968/DURABLE_LONG_LASTING_Linear_shower_drain_is_taf51j.jpg",
+  images: [
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781625961/Unparalleled_Drainage_Efficiency_and_Clog_gfqxxf.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781625961/682999099741056643_jaqfeh.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781625960/1117103882568255096_ardzqf.jpg",
+    "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781625960/132715520263447180_wpi4he.jpg",
+  ],
+},
 ]
 

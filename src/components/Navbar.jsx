@@ -57,8 +57,8 @@ export default function Navbar() {
           {/* Isolated Brand Logo (Perfect Contrast Zone) */}
           <div className="flex items-center select-none py-1">
             <img 
-              src="/assets/arco-logo.png" 
-              alt="Arco Sanitary Logo" 
+              src="https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781637988/arco-logo_kun34g.png" 
+              alt="Arco bath Logo" 
               className="h-25 md:h-25 w-auto object-contain block"
               
             />

@@ -27,28 +27,21 @@ export default function Footer() {
           {/* Pure SVGs (No import required, completely independent) */}
           <div className="flex items-center gap-4 mt-3">
             {/* Facebook */}
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className=" text-white hover:text-primary transition-colors duration-300">
+            <a href="https://www.facebook.com/share/r/1947efWSZ8/" target="_blank" rel="noopener noreferrer" className=" text-white hover:text-primary transition-colors duration-300">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
               </svg>
             </a>
-            {/* Instagram */}
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className=" text-white hover:text-primary transition-colors duration-300">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
-              </svg>
-            </a>
-            {/* Twitter / X */}
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className=" text-white hover:text-primary transition-colors duration-300">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-              </svg>
-            </a>
-            {/* LinkedIn */}
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className=" text-white hover:text-primary transition-colors duration-300">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 100 4 2 2 0 000-4z" />
+
+
+            <a
+              href="https://vt.tiktok.com/ZSQbhSf7E/" // 👈 Yahan apne account ka link dal dena chanda
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition-colors duration-300"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.525.01c1.864 0 3.655.516 5.2 1.424V6.26c-1.332-.767-2.85-1.182-4.417-1.182h-.783v10.428c0 2.213-1.8 4.012-4.017 4.012-2.217 0-4.017-1.8-4.017-4.012 0-2.213 1.8-4.013 4.017-4.013.344 0 .684.043 1.011.13v-4.14A8.136 8.136 0 0 0 8.51 7.075c-4.429 0-8.034 3.6-8.034 8.013 0 4.414 3.605 8.012 8.034 8.012 4.43 0 8.017-3.598 8.017-8.012V5.66c1.603 1.155 3.533 1.815 5.626 1.848v-4.13c-2.393-.153-4.524-1.25-5.992-2.923l-.151-.18A3.76 3.76 0 0 1 12.525.01z" />
               </svg>
             </a>
           </div>

@@ -18,7 +18,7 @@ const coreValues = [
 
 // Showroom milestones / numbers
 const milestones = [
-  { num: "14+", label: "Years of Trust" },
+  { num: "17", label: "Years of Trust" },
   { num: "500+", label: "Luxury Products" },
   { num: "15+", label: "Premium Brands" },
   { num: "1,200+", label: "Spaces Transformed" }
