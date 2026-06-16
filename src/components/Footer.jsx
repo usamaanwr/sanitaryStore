@@ -83,9 +83,14 @@ export default function Footer() {
 
         <p className="text-[10px] uppercase tracking-[0.25em] text-white font-light text-left md:text-center">
           Designed & Developed by{' '}
-          <span className="text- font-bold">
+          <a
+            href="https://www.linkedin.com/in/muhammad-osama-125213292/" // 👈 Yahan apna asli LinkedIn profile link paste kar dena jani
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-white hover:text-primary transition-colors duration-300 inline-block cursor-pointer"
+          >
             Muhammad Osama
-          </span>
+          </a>
         </p>
 
         <p className="text-[10px] uppercase tracking-widest  text-white font-light text-left md:text-right">
