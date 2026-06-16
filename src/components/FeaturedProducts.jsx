@@ -27,8 +27,8 @@ export default function FeaturedProducts() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {featuredItems.map((product) => (
             <div 
-              key={product.id}
-              onClick={() => navigate(`/product/${product.id}`)}
+              key={product.slug}
+              onClick={() => navigate(`/product/${product.slug}`)}
               className="group cursor-pointer flex flex-col text-left"
             >
               {/* Fixed Ratio Image Box with Zoom-In Hover */}

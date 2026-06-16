@@ -2,6 +2,7 @@
  export const categories = [
   {
     id: 1,
+    slug: "shower pannel",
     name: "Shower Panel",
     category: "Showers",
     description: "Premium multi-function shower panel with rainfall head, body jets, and thermostatic mixer — built for a luxurious bathing experience.",
@@ -15,6 +16,7 @@
   },
   {
     id: 2,
+    slug:"bath mixer",
     name: "Bath Mixer",
     category: "Faucets",
     description: "Solid brass bath mixer with smooth ceramic cartridge, chrome finish, and precise temperature control.",
@@ -28,6 +30,7 @@
   },
   {
     id: 3,
+    slug:"ceramics",
     name: "Cabinet Wash Basin",
     category: "Ceramics",
     description: "Elegant ceramic wash basin paired with a modern storage cabinet — perfect blend of style and functionality.",
@@ -41,6 +44,7 @@
   },
   {
     id: 4,
+    slug:"faucets",
     name: "Concealed Fitting",
     category: "Faucets",
     description: "Wall-concealed diverter and mixing valve set — clean, minimal look with reliable in-wall mechanism.",
@@ -54,6 +58,7 @@
   },
   {
     id: 5,
+    slug:"vanity bowl",
     name: "Vanity Bowl",
     category: "Ceramics",
     price: "Rs. 16,000",
@@ -68,6 +73,7 @@
   },
   {
     id: 6,
+    slug:"sink mixer",
     name: "Sink Mixer",
     category: "Faucets",
     description: "Single-lever sink mixer with water-saving aerator and durable chrome-plated body.",
@@ -81,6 +87,7 @@
   },
   {
     id: 7,
+    slug:"hang commode",
     name: "Wall Hung Commode",
     category: "Ceramics",
     description: "Space-saving wall-hung commode with dual-flush technology and soft-close seat for a modern look.",
@@ -94,19 +101,21 @@
   },
   {
     id: 8,
+    slug:"concealed tank",
     name: "Concealed Tank",
     category: "Ceramics",
     description: "In-wall concealed cistern tank — durable, quiet flush mechanism, ideal for wall-hung commodes.",
-    // mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524628/05_ih6tpr.jpg",
-    // images: [
-    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524623/04_ao7pzj.jpg",
-    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524618/03_zlvoe6.jpg",
-    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524613/02_zapes9.jpg",
-    //   "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781524608/01_l6pdkm.jpg",
-    // ],
+    mainImage: "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/You_won_t_see_it_but_you_ll_feel_the_difference_ascylu.jpg",
+    images: [
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/We_would_like_to_let_you_know_that_this_smart_y2spk2.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/332773859988133612_bv8vm6.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594110/This_is_a_Brand_new_RAK_Ecofix_Top_and_Front_vjeacj.jpg",
+      "https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781594109/586945763965901763_zpiazu.jpg",
+    ],
   },
   {
     id: 9,
+    slug:"mirro",
     name: "LED Looking Mirror",
     category: "Accessories",
     price: "Rs. 19,500",

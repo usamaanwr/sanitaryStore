@@ -7,16 +7,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-dark text-base-100/80 py-16 px-6 md:px-12 w-full font-sans border-t border-white/5">
-      
+
       {/* Inner Container */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-10 mb-12 text-left">
-        
+
         {/* Column 1: Brand Info & SVG Social Icons */}
         <div className="flex flex-col items-start gap-4">
           <div className="flex flex-col justify-center select-none">
-            <img 
-              src="/assets/arco-logo.png" 
-              alt="Arco Sanitary Logo" 
+            <img
+              src="/assets/arco-logo.png"
+              alt="Arco bath Logo"
               className="h-25 md:h-25 w-auto object-contain block"
             />
           </div>
@@ -57,7 +57,7 @@ export default function Footer() {
         {/* Column 2: Quick Links */}
         <div className="flex flex-col items-start gap-3">
           <h4 className="text-xs uppercase tracking-[0.2em] text-white font-semibold mb-2">Navigation</h4>
-          <Link to="/" className="text-xs font-light text-white hover:text-primary transition-colors">Home</Link>
+          <Link to="/home" className="text-xs font-light text-white hover:text-primary transition-colors">Home</Link>
           <Link to="/product" className="text-xs font-light text-white hover:text-primary transition-colors">Our Products</Link>
           <Link to="/about" className="text-xs font-light text-white hover:text-primary transition-colors">About Us</Link>
           <Link to="/contact" className="text-xs font-light text-white hover:text-primary transition-colors">Contact</Link>
@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* Column 3: Product Range Preview */}
         <div className="flex flex-col items-start gap-3">
-          <h4 className="text-xs uppercase tracking-[0.2em] text-base-100 font-semibold mb-2">Collections</h4>
+          <h4 className="text-xs uppercase tracking-[0.2em] text-white font-semibold mb-2">Collections</h4>
           <span className="text-xs font-light text-white">Designer Faucets</span>
           <span className="text-xs font-light text-white">Thermostatic Showers</span>
           <span className="text-xs font-light text-white">Bespoke Washbasins</span>
@@ -75,9 +75,9 @@ export default function Footer() {
         {/* Column 4: Contact Details */}
         <div className="flex flex-col items-start gap-3">
           <h4 className="text-xs uppercase tracking-[0.2em]  text-white font-semibold mb-2">Showroom Info</h4>
-          <p className="text-xs font-light text-white leading-relaxed">Main Showroom Address, Karachi, Pakistan</p>
+          <p className="text-xs font-light text-white leading-relaxed">plot 93, garden view appt, shop no # 03 ARCOBATH national stadium road & main agha khan road, 94 pakistan, near newtown police station, Karachi Memon Society Block 3 Gulshan-e-Iqbal, Karachi,</p>
           <p className="text-xs font-light  text-white">Mon - Sat: 11:00 AM - 08:00 PM</p>
-          <p className="text-xs font-medium text-white tracking-wider mt-1">info@arcosanitary.com</p>
+          <p className="text-xs font-medium text-white tracking-wider mt-1">arifkhan.ak588@gmail.com</p>
         </div>
 
       </div>

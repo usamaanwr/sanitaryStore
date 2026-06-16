@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { categories } from '../data/products';
 
 export default function ProductDetail() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
 
   // Robust parsing to match string/number IDs smoothly
-  const product = categories.find((item) => String(item.id) === String(id));
+  const product = categories.find((item) => (item.slug) === slug);
 
   const [activeImage, setActiveImage] = useState('');
 
@@ -115,8 +115,9 @@ export default function ProductDetail() {
             </div>
 
             {/* Action Button */}
-            <button className="w-full mt-10 bg-neutral text-base-100 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-primary transition-colors duration-300">
+            <button className="w-full mt-10 bg-primary text-base-100 py-4 text-[10px] uppercase tracking-[0.25em] font-medium hover:bg-dark cursor-pointer transition-colors duration-300">
               Inquire Specifications
+             
             </button>
           </div>
 
