@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4">
           <div className="flex flex-col justify-center select-none">
             <img
-              src="/assets/arco-logo.png"
+              src="https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781637988/arco-logo_kun34g.png"
               alt="Arco bath Logo"
               className="h-25 md:h-25 w-auto object-contain block"
             />

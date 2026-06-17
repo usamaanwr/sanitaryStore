@@ -96,8 +96,8 @@ export default function Preloader() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="text-[9px] uppercase tracking-[0.38em] font-medium"
-          style={{ color: '#6B6259' }}
+          className="text-[9px] uppercase tracking-[0.38em] font-semibold"
+          style={{ color: 'black' }}
         >
           Premium Living Spaces
         </motion.p>
@@ -122,8 +122,8 @@ export default function Preloader() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.5 }}
-        className="absolute bottom-6 text-[8px] uppercase tracking-[0.25em] font-mono"
-        style={{ color: 'rgba(107,98,89,0.45)' }}
+        className="absolute bottom-6 text-[8px] uppercase tracking-[0.25em] font-semibold"
+        style={{ color: 'black' }}
       >
         © 2026 Arco Studio
       </motion.p>
