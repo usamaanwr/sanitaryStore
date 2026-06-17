@@ -84,7 +84,7 @@ export default function Footer() {
         <p className="text-[10px] uppercase tracking-[0.25em] text-white font-light text-left md:text-center">
           Designed & Developed by{' '}
           <a
-            href="https://www.linkedin.com/in/muhammad-osama-125213292/" // 👈 Yahan apna asli LinkedIn profile link paste kar dena jani
+            href="https://www.linkedin.com/in/muhammad-osama-125213292/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-white hover:text-primary transition-colors duration-300 inline-block cursor-pointer"

@@ -25,7 +25,7 @@ const points = [
 export default function WhyChooseUs() {
   return (
     <section className="py-24 px-6 md:px-12 w-full bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto w-full">
 
         {/* ===== BADGE + HEADING ===== */}
         <div className="flex items-center gap-3 mb-4">
