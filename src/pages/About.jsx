@@ -108,13 +108,13 @@ export default function About() {
           </div>
 
           {/* Close-up Luxury Detail Shot */}
-          <div className="md:col-span-4 h-[380px] md:h-[520px] bg-[#F7F5F2] overflow-hidden hidden md:block">
-            <img 
-              src="https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781617821/arco_show_room_whuae8.webp" 
-              alt="Luxury Sanitary Details" 
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
-            />
-          </div>
+          <div className="col-span-1 md:col-span-4 h-[380px] md:h-[520px] bg-[#F7F5F2] overflow-hidden">
+    <img 
+      src="https://res.cloudinary.com/dwyoohdjk/image/upload/q_auto/f_auto/v1781617821/arco_show_room_whuae8.webp" 
+      alt="Luxury Sanitary Details" 
+      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+    />
+  </div>
 
         </div>
 
